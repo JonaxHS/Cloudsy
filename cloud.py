@@ -87,7 +87,7 @@ async def start(bot, update):
         )
     )
 
-@Cloudsy.on_callback_query(filters.regex(r"ALLlist1"))
+@Cloudsy.on_callback_query(filters.regex(r"ALLlist1")),
 @Cloudsy.on_callback_query(filters.regex(r"pixellist1"))
 async def media_filghter(bot, data: CallbackQuery):
     
@@ -199,7 +199,7 @@ async def medias(bot, update):
         quote=True
     )
 
-    @Cloudsy.on_callback_query(filters.regex(r"ALLlist1"))
+@Cloudsy.on_callback_query(filters.regex(r"ALLlist1")),
 @Cloudsy.on_callback_query(filters.regex(r"gofilelist1"))
 async def filterpix(bot, data: CallbackQuery):
     message = await data.message.edit_text(
@@ -252,7 +252,7 @@ async def filterpix(bot, data: CallbackQuery):
         disable_web_page_preview=True
     )
     
-@Cloudsy.on_callback_query(filters.regex(r"ALLlist1"))   
+@Cloudsy.on_callback_query(filters.regex(r"ALLlist1")),
 @Cloudsy.on_callback_query(filters.regex(r"anonlist1"))
 async def uplouhad(bot, data: CallbackQuery):
     m = await data.message.edit_text("Downloading file to server")
