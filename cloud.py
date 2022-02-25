@@ -77,12 +77,12 @@ def uploadFile(file: str):
 @Cloudsy.on_message(filters.private & filters.command("start"))
 async def start(bot, update):
     await update.reply_text(
-        text=f"Hello {update.from_user.mention}, 👋\n\nJust send me a media & I'll upload it to the cloud.\n\nMade with ❤️ by @Sybots",
+        text=f"Hello {update.from_user.mention}, 👋\n\nSolo envíame un archivo y lo subiré a la nube.\n\nHecho con ❤️ por @Jonaxhs",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("📨 Updates", url="https://t.me/sybots"),
-                 InlineKeyboardButton("🗂 Source", url="https://github.com/reindears/cloudsy")]
+                [InlineKeyboardButton("📨 Updates", url="https://t.me/Jonaxhs"),
+                 InlineKeyboardButton("🗂 Source", url="https://github.com/JonaxHS/Cloudsy")]
             ]
         )
     )
@@ -93,25 +93,25 @@ async def media_filghter(bot, data: CallbackQuery):
     
     logs = []
     message = await data.message.edit_text(
-        text="Processing file"
+        text="Procesando archivo"
     )
     
     try:
         # download
         try:
             await message.edit_text(
-                text="Downloading file to server",
+                text="Descargando archivo al servidor",
                 disable_web_page_preview=True
             )
         except:
             pass
         media = await data.message.reply_to_message.download()
-        logs.append("Download Successfully")
+        logs.append("Descargar con éxito")
         
         # upload
         try:
             await message.edit_text(
-                text="Uploading to Pixeldrain",
+                text="Subiendo a Pixeldrain",
                 disable_web_page_preview=True
             )
         except:
@@ -124,12 +124,12 @@ async def media_filghter(bot, data: CallbackQuery):
             pass
         try:
             await message.edit_text(
-                text="Uploaded Successfully",
+                text="Cargado con éxito",
                 disable_web_page_preview=True
             )
         except:
             pass
-        logs.append("Upload Successfully")
+        logs.append("Subido con éxito")
         
         # after upload
         if response["success"]:
@@ -185,12 +185,13 @@ async def media_filghter(bot, data: CallbackQuery):
 @Cloudsy.on_message(filters.private & filters.media)
 async def medias(bot, update):
     await update.reply_text(
-        "Choose a Cloud Server for Uploading",
+        "Elija un servidor en la nube para cargar",
         parse_mode="Markdown",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("GoFile", callback_data="gofile"),
+                [InlineKeyboardButton("Todos", callback_data="gofile,anon,pixel")
+                 InlineKeyboardButton("GoFile", callback_data="gofile"),
                  InlineKeyboardButton("Anonfiles", callback_data="anon"),
                  InlineKeyboardButton("Pixeldrain", callback_data="pixel")]
             ]
