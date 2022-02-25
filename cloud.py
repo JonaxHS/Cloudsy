@@ -192,7 +192,7 @@ async def medias(bot, update):
                 [InlineKeyboardButton("GoFile", callback_data="Gofile"),
                  InlineKeyboardButton("Anonfiles", callback_data="Anon"),
                  InlineKeyboardButton("Pixeldrain", callback_data="Pixel"),
-                 InlineKeyboardButton("Todos", callback_data="Gofile", "Anon", "Pixel")]
+                 InlineKeyboardButton("Todos", callback_data="Gofile;Anon;Pixel")]
             ]
         ),
         quote=True
