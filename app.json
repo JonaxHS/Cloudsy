@@ -8,7 +8,7 @@
         "Telegram Bot",
         "Pixeldrain"
     ],
-    "website": "https://miapk.store,
+    "website": "https://miapk.store",
     "repository": "https://github.com/JonaxHS/Cloudsy",
     "success_url": "https://miapk.store",
     "env": {
