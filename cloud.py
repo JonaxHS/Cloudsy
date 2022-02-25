@@ -190,10 +190,10 @@ async def medias(bot, update):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("Todos", callback_data="ALLlist1"),
-                 InlineKeyboardButton("GoFile", callback_data="gofilelist1"),
+                [InlineKeyboardButton("GoFile", callback_data="gofilelist1"),
                  InlineKeyboardButton("Anonfiles", callback_data="anonlist1"),
-                 InlineKeyboardButton("Pixeldrain", callback_data="pixellist1")]
+                 InlineKeyboardButton("Pixeldrain", callback_data="pixellist1"),
+                 InlineKeyboardButton("Todos", callback_data="ALLlist1")]
             ]
         ),
         quote=True
