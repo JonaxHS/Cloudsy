@@ -87,7 +87,7 @@ async def start(bot, update):
         )
     )
 
-@Cloudsy.on_callback_query(filters.regex(r"ALLlist1"))
+@Cloudsy.on_callback_query(filters.regex(r"Pixel"))
 async def media_filghter(bot, data: CallbackQuery):
     
     logs = []
@@ -189,16 +189,16 @@ async def medias(bot, update):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("GoFile", callback_data="gofilelist1"),
-                 InlineKeyboardButton("Anonfiles", callback_data="anonlist1"),
-                 InlineKeyboardButton("Pixeldrain", callback_data="pixellist1"),
-                 InlineKeyboardButton("Todos", callback_data="ALLlist1")]
+                [InlineKeyboardButton("GoFile", callback_data="Gofile"),
+                 InlineKeyboardButton("Anonfiles", callback_data="Anon"),
+                 InlineKeyboardButton("Pixeldrain", callback_data="Pixel"),
+                 InlineKeyboardButton("Todos", callback_data="Gofile", callback_data="Anon", callback_data="Pixel")]
             ]
         ),
         quote=True
     )
 
-@Cloudsy.on_callback_query(filters.regex(r"ALLlist1"))
+@Cloudsy.on_callback_query(filters.regex(r"Gofile"))
 async def filterpix(bot, data: CallbackQuery):
     message = await data.message.edit_text(
         text="Processing file"
@@ -250,7 +250,7 @@ async def filterpix(bot, data: CallbackQuery):
         disable_web_page_preview=True
     )
     
-@Cloudsy.on_callback_query(filters.regex(r"ALLlist1"))
+@Cloudsy.on_callback_query(filters.regex(r"Anon"))
 async def uplouhad(bot, data: CallbackQuery):
     m = await data.message.edit_text("Downloading file to server")
     now = time.time()
