@@ -1,6 +1,6 @@
 {
     "name": "Cloud-Upload-Bot",
-    "description": "A Bot that can upload file to various cloud servers",
+    "description": "Un bot que puede cargar archivos en varios servidores en la nube",
     "logo": "https://freepngimg.com/thumb/iphone/68111-apple-app-drive-iphone-icloud-logo-my.png",
     "keywords": [
         "Cloud",
@@ -8,9 +8,9 @@
         "Telegram Bot",
         "Pixeldrain"
     ],
-    "website": "https://github.com/Reindears",
-    "repository": "https://github.com/Reindears/Cloudsy",
-    "success_url": "https://telegram.dog/SyBots",
+    "website": "https://miapk.store,
+    "repository": "https://github.com/JonaxHS/Cloudsy",
+    "success_url": "https://miapk.store",
     "env": {
         "BOT_TOKEN": {
             "description": "You Telegram Bot Token from @BotFatherXD",
